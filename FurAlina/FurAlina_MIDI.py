@@ -26,5 +26,6 @@ mVoice = [6,7,8,9,9,8,7,6,5,9,8,9,7,8,7,9,12,13,12,7,8,7,5,6,9,7,8,9,14,13,12,5,
 #If n is a pattern itself, then each value is repeated by the number at the same index in the given pattern.
 furAlina = P[1,4].stutter([[1,2,3,4,5,6,7,6,5,4,3,2,1],[1]])
 Clock.set_time(-1)#Para comenzar desde el primer compás
-p1 >> keys(mVoice, dur = furAlina, oct = 6)
-p2 >> keys(getTvoiceFromMelody(mVoice, 0), dur = furAlina, oct = 6)
+p1 >> MidiOut(mVoice, dur = furAlina, channel = 1, oct = 6)
+p2 >> MidiOut(getTvoiceFromMelody(mVoice, 0), dur = furAlina, channel = 2, oct = 6)
+
